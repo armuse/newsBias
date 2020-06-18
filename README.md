@@ -1,5 +1,5 @@
 # newsBias
-exploring news bias in local reporting
+exploring news bias in local reporting over the last 5 years (2015-2020)
 
 towns:
 Baldwin ( + Baldwin Harbor) NY
@@ -24,3 +24,6 @@ Terms used for identifying crimes (truth dataset):
 	violence
 	manslaughter
 	shooting
+
+Test data sample for software development - 100
+Approximately 3500-4000 articles per town
