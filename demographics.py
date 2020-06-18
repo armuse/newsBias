@@ -4,7 +4,7 @@ import pandas as pd
 
 data = {'Name': ['Baldwin','Baldwin Harbor','Freeport','Oceanside','Rockville Centre'],
 		'Population': [25134,7690,43128,31185,24442],
-		'Square Miles': [3.,1.2,4.6,4.9,3.3]
+		'Square Miles': [3.,1.2,4.6,4.9,3.3],
 		'Per White': [34,43,25,85,79],
 		'Per Black': [35,28,29,1,6],
 		'Per Hispanic': [25,22,42,11,11],
