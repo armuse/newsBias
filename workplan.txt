@@ -1,0 +1,23 @@
+Work Plan
+
+-Gather data from proquest - busy work for mom
+
+-(can only be downloaded in batches of n = 100; N = ~4k)
+
+DONE-Code to Separate records into separate files and remove unncessary information
+
+-Tokenize/stem/lemm title and subject classifications
+
+	-Remove 'Alec' too
+
+-Create 'truth' variable based on subject classifications
+
+	-Calculate crime reporting stats and comparisons
+
+-Sentiment Analysis on Titles (positive, neutral and negative)
+
+	-Explore way to scrape full text
+
+-k=4, k-clustering
+
+	-Use ML to classify the news 'topics' for each town
