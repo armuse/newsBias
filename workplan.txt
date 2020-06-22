@@ -4,11 +4,11 @@ Work Plan
 
 -Add together the data for each town (can only be downloaded in batches of n = 100; N = ~4k)
 
--Convert to csv - bash?
-
--Clean data and remove unncessary information
+DONE-Separate records into separate files and remove unncessary information
 
 -Tokenize/stem/lemm title and subject classifications
+
+	-Remove 'Alec' too
 
 -Create 'truth' variable based on subject classifications
 
