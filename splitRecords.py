@@ -1,4 +1,4 @@
-
+#could make a for loop for the many input datafiles
 input = open('ProQuestDocuments-2020-06-18.txt','r')
 
 town = 'Baldwin' #'Freeport', 'Oceanside', 'Rockville'
