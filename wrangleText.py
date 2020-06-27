@@ -40,9 +40,9 @@ for article in inFiles: #each article is its own line
         for word in word_tokens: #keep basic words
             if word.isalpha():
                 if not word in stop_words:
-                    print(lemmatizer.lemmatize(word))
+                    #print(lemmatizer.lemmatize(word))
                     edited.append(lemmatizer.lemmatize(word))
-    #bag of words vectors? 
+    #bag of words vectors?
 
     if keep:
         outName = outDir+article[12:-5]+'-'+str(truthNeg)+'.txt'
