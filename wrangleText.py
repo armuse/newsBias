@@ -29,7 +29,7 @@ for article in inFiles: #each article is its own line
             print(line)
             for term in neg:
                 if term in line:
-                    truthNeg = True
+                    #truthNeg = True
                     continue #one true, all true
         #save only title, full text and subject
         elif (line[0:6] == 'credit' or line[0:4] == 'illu'
@@ -37,21 +37,19 @@ for article in inFiles: #each article is its own line
             or line[0:11] == 'publication'):
             continue #skip non article information
         word_tokens = word_tokenize(line)
-        no_punctuation = [word.isalpha() for word in word_tokens]
-        remove_stop = [word for word in no_punctuation if not word in stop_words]
-        lemmed_words = [lemmatizer.lemmatize(word) for word in remove_stop]
-        #remove punctuation
-        #remove stop words
-        #stem/lemm
-        print (lemmed_words)
-        #edited.append(+' ')
+        for word in word_tokens: #keep basic words
+            if word.isalpha():
+                if not word in stop_words:
+                    print(lemmatizer.lemmatize(word))
+                    edited.append(lemmatizer.lemmatize(word))
+    #bag of words vectors? 
 
     if keep:
         outName = outDir+article[12:-5]+'-'+str(truthNeg)+'.txt'
         outFile = open(outName,'w')
-        outFile.write(lemmed_words)
-#        for i in range(len(edited)):
-#            outFile.write(edited[i])
+#        outFile.write(edited)
+        for i in range(len(edited)):
+            outFile.write(edited[i]+' ')
         outFile.close()
     file.close()
 
