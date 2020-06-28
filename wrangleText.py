@@ -27,7 +27,7 @@ for article in inFiles: #each article is its own line
             continue
         if line[0:3] == 'sub': #check subject terms for truth classification
             subjects = word_tokenize(line)
-            print(subjects)
+            #print(subjects)
             for term in neg:
                 if term in subjects:
                     truthNeg = True
@@ -36,13 +36,14 @@ for article in inFiles: #each article is its own line
         #save only title, full text and subject
         elif (line[0:6] == 'credit' or line[0:4] == 'illu'
             or line[0:6] == 'author' or line[0:5] == 'https'
-            or line[0:11] == 'publication'): #cases in python?!?!
+            or line[0:11] == 'publication' or line[0:8] == 'abstract'
+            or line[0:6] == 'refill'): #cases in python?!?!
             continue #skip non article information
-        word_tokens = word_tokenize(line)
         if (line[0:5] == 'title'): #remove label title
-            line = line[6:]
+            line = line[7:]
         if (line[0:9] == 'full text'): #remove label full text
-            line = line[10:]
+            line = line[11:]
+        word_tokens = word_tokenize(line)
         for word in word_tokens: #keep basic words
             if word.isalpha():
                 if not word in stop_words:
