@@ -1,7 +1,16 @@
-#could make a for loop for the many input datafiles
-input = open('ProQuestDocuments-2020-06-18.txt','r')
+#get a town name
+town_names = ['Baldwin','Freeport','Oceanside','Rockville Centre']
+town = ''
+while not town:
+    town = input("Which town would you like to process the data for? ")
+    if town in town_names:
+        print("Now Splitting "+town)
+    else: print("You didn't enter a valid town, please try again")
 
-town = 'Baldwin' #'Freeport', 'Oceanside', 'Rockville'
+inFile = 'ProQuestDocuments-'+town+'-1000.txt'
+input = open(inFile,'r')
+
+#town = 'Baldwin' #'Freeport', 'Oceanside', 'Rockville'
 outDir = 'data/'+town+'/'
 title = 'empty'
 text = 'empty'

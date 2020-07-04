@@ -1,3 +1,4 @@
+import subprocess
 import string
 from nltk.tokenize import word_tokenize #splits words and punctuation
 from nltk.corpus import stopwords
@@ -6,16 +7,32 @@ from nltk.stem import WordNetLemmatizer
 
 lemmatizer = WordNetLemmatizer()
 
+town_names = ['Baldwin','Freeport','Oceanside','Rockville Centre']
+town = ''
+while not town:
+    town = input("Which town would you like to wrangle the text for? ")
+    if town in town_names:
+        print("Now Splitting "+town)
+    else: print("You didn't enter a valid town, please try again")
+
+#create input file with shell commands
+cmd = 'ls data/'+town+' > input.txt'
+subprocess.run(cmd, shell=True)
+
+#inFile = 'ProQuestDocuments-'+town+'-1000.txt'
+#input = open(inFile,'r')
+
 inFiles = open('input.txt','r') #ls data/X/* > input.xt
 
 neg = ['criminal','firearms','murders','manslaughter','arrests','burglary','robbery','violence','cocaine','heroin','police']
 #victimization, missing persons,
-outDir = 'data/Baldwin-edited'
+outDir = 'data/'+town+'-edited/'
 
 stop_words = set(stopwords.words('english'))
 
 for article in inFiles: #each article is its own line
-    file = open(article[:-1],'r') #there's \n at end of line
+    name = 'data/'+town+'/'+article
+    file = open(name[:-1],'r') #there's \n at end of line #used to be article
     keep = True
     truthNeg = False
     edited = []
@@ -52,7 +69,7 @@ for article in inFiles: #each article is its own line
     #bag of words vectors?
 
     if keep:
-        outName = outDir+article[12:-5]+'-'+str(truthNeg)+'.txt'
+        outName = outDir+article[:-5]+'-'+str(truthNeg)+'.txt'
         outFile = open(outName,'w')
 #        outFile.write(edited)
         for i in range(len(edited)):
