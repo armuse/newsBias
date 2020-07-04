@@ -8,7 +8,7 @@ lemmatizer = WordNetLemmatizer()
 
 inFiles = open('input.txt','r') #ls data/X/* > input.xt
 
-neg = ['criminal','firearms','murder','manslaughter','arrests','burglary','robbery','violence','police']
+neg = ['criminal','firearms','murders','manslaughter','arrests','burglary','robbery','violence','cocaine','heroin','police']
 #victimization, missing persons,
 outDir = 'data/Baldwin-edited'
 
@@ -26,16 +26,23 @@ for article in inFiles: #each article is its own line
             keep = False
             continue
         if line[0:3] == 'sub': #check subject terms for truth classification
-            print(line)
+            subjects = word_tokenize(line)
+            #print(subjects)
             for term in neg:
-                if term in line:
-                    #truthNeg = True
-                    continue #one true, all true
+                if term in subjects:
+                    truthNeg = True
+                    continue #one true, all True
+            continue #don't save out subject line
         #save only title, full text and subject
         elif (line[0:6] == 'credit' or line[0:4] == 'illu'
             or line[0:6] == 'author' or line[0:5] == 'https'
-            or line[0:11] == 'publication'):
+            or line[0:11] == 'publication' or line[0:8] == 'abstract'
+            or line[0:6] == 'refill'): #cases in python?!?!
             continue #skip non article information
+        if (line[0:5] == 'title'): #remove label title
+            line = line[7:]
+        if (line[0:9] == 'full text'): #remove label full text
+            line = line[11:]
         word_tokens = word_tokenize(line)
         for word in word_tokens: #keep basic words
             if word.isalpha():
