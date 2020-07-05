@@ -4,6 +4,7 @@ from nltk.tokenize import word_tokenize #splits words and punctuation
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 from nltk.stem import WordNetLemmatizer
+from nltk.tag import pos_tag
 
 lemmatizer = WordNetLemmatizer()
 
@@ -61,11 +62,18 @@ for article in inFiles: #each article is its own line
         if (line[0:9] == 'full text'): #remove label full text
             line = line[11:]
         word_tokens = word_tokenize(line)
-        for word in word_tokens: #keep basic words
+        #for word, in word_tokens: #keep basic words
+        for word, tag in pos_tag(word_tokens):
+            if tag.startswith('NN'):
+                pos = 'n'
+            elif tag.startswith('VB'):
+                pos = 'v'
+            else:
+                pos = 'a'
             if word.isalpha():
                 if not word in stop_words:
                     #print(lemmatizer.lemmatize(word))
-                    edited.append(lemmatizer.lemmatize(word))
+                    edited.append(lemmatizer.lemmatize(word,pos))
     #bag of words vectors?
 
     if keep:
