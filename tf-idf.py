@@ -30,8 +30,8 @@ def get_all_words(list_of_words): #yields all the words in above lists
         for word in list:
             yield word
 
-#inputFiles = glob.glob('data/Baldwin-edited/*')
-inputFiles = glob.glob('data/Freeport-edited/*')
+inputFiles = glob.glob('data/Baldwin-edited/*True*')
+#inputFiles = glob.glob('data/Freeport-edited/*')
 
 #print(inputFiles)
 
