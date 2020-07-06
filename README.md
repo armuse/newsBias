@@ -1,5 +1,11 @@
 # newsBias
-exploring news bias in local reporting over the last 5 years (2015-2020)
+Goal: exploring news bias in local reporting over the last 5 years (2015-2020)
+
+Instructions so far (uses python3):
+python splitRecords.py
+python wrangleText.py
+
+Jupyter notebook of Demographics for further analysis
 
 towns:
 Baldwin ( + Baldwin Harbor) NY
@@ -25,5 +31,6 @@ Terms used for identifying crimes (truth dataset):
 	manslaughter
 	shooting
 
-Test data sample for software development - 100
-Approximately 3500-4000 articles per town
+Test data sample for software development ~ 100 
+Train on ~1000 articles per town 
+Approximately 3500-4000 articles per town in 5 years
