@@ -1,11 +1,11 @@
 import string
 import glob
-from random import seed
-from random import sample
 from numpy import random
 from nltk import FreqDist
 from nltk import classify
 from nltk import NaiveBayesClassifier
+
+#next, remove low frequency words to try to improve accuracy
 
 def readIn(filename): #return corpus per entry
     tmp = open(file,'r')
