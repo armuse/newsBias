@@ -4,6 +4,7 @@ from nltk.tokenize import word_tokenize #splits words and punctuation
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 from nltk.stem import WordNetLemmatizer
+from nltk.tag import pos_tag
 
 lemmatizer = WordNetLemmatizer()
 
@@ -24,11 +25,14 @@ subprocess.run(cmd, shell=True)
 
 inFiles = open('input.txt','r') #ls data/X/* > input.xt
 
-neg = ['criminal','firearms','murders','manslaughter','arrests','burglary','robbery','violence','cocaine','heroin','police']
+neg = ['criminal','firearms','firearm','murders','murder,''manslaughter','arrests','burglary','robbery','violence','cocaine','heroin']
 #victimization, missing persons,
 outDir = 'data/'+town+'-edited/'
 
 stop_words = set(stopwords.words('english'))
+#add some common yet meaningless words to stop words to remove
+meaningless_words = ['county','nassau','long','island','york','NY']
+stop_words.update(meaningless_words)
 
 for article in inFiles: #each article is its own line
     name = 'data/'+town+'/'+article
@@ -39,17 +43,14 @@ for article in inFiles: #each article is its own line
 
     for line in file:
         line = line.lower()
-        if 'alec' in line: #Alec Baldwin is NOISE
-            keep = False
-            continue
-        if line[0:3] == 'sub': #check subject terms for truth classification
-            subjects = word_tokenize(line)
+        if town == 'Baldwin':
+            if 'alec' in line: #Alec Baldwin is NOISE
+                keep = False
+                continue
+        #if line[0:3] == 'sub': #check subject terms for truth classification
+        #    subjects = word_tokenize(line)
             #print(subjects)
-            for term in neg:
-                if term in subjects:
-                    truthNeg = True
-                    continue #one true, all True
-            continue #don't save out subject line
+             #don't save out subject line
         #save only title, full text and subject
         elif (line[0:6] == 'credit' or line[0:4] == 'illu'
             or line[0:6] == 'author' or line[0:5] == 'https'
@@ -61,11 +62,23 @@ for article in inFiles: #each article is its own line
         if (line[0:9] == 'full text'): #remove label full text
             line = line[11:]
         word_tokens = word_tokenize(line)
-        for word in word_tokens: #keep basic words
+        for term in neg:
+            if term in word_tokens:
+                truthNeg = True
+                # #one true, all True
+            #if truthNeg: continue
+        #for word, in word_tokens: #keep basic words
+        for word, tag in pos_tag(word_tokens):
+            if tag.startswith('NN'):
+                pos = 'n'
+            elif tag.startswith('VB'):
+                pos = 'v'
+            else:
+                pos = 'a'
             if word.isalpha():
                 if not word in stop_words:
                     #print(lemmatizer.lemmatize(word))
-                    edited.append(lemmatizer.lemmatize(word))
+                    edited.append(lemmatizer.lemmatize(word,pos))
     #bag of words vectors?
 
     if keep:
