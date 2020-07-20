@@ -7,6 +7,14 @@ from nltk import FreqDist
 from nltk import classify
 from nltk import NaiveBayesClassifier
 
+#accuracy is ~65% for Baldiwn - check Freeport & Oceanside
+#add precision, recall, F1 etc
+#try 10 k-fold instead of single train-test split
+#test removing low frequency words
+#test weighting by TF IDF
+
+#once happy - productionize/pickle
+
 def readIn(filename): #return corpus per entry
     tmp = open(file,'r')
     list_of_words = []
