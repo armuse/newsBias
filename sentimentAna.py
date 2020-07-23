@@ -1,7 +1,5 @@
 import string
 import glob
-from random import seed
-from random import sample
 from numpy import random
 from nltk import FreqDist
 from nltk import classify
@@ -85,3 +83,4 @@ if __name__ == "__main__":
     #print out Accuracy and most informative feature
     print("Accuracy is: ", classify.accuracy(classifier, test_data))
     print(classifier.show_most_informative_features(20))
+
