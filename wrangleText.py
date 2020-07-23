@@ -8,7 +8,7 @@ from nltk.tag import pos_tag
 
 lemmatizer = WordNetLemmatizer()
 
-town_names = ['Baldwin','Freeport','Oceanside','Rockville Centre']
+town_names = ['Baldwin','Freeport','Oceanside']
 town = ''
 while not town:
     town = input("Which town would you like to wrangle the text for? ")
@@ -25,14 +25,15 @@ subprocess.run(cmd, shell=True)
 
 inFiles = open('input.txt','r') #ls data/X/* > input.xt
 
-neg = ['criminal','firearms','firearm','murders','murder,''manslaughter','arrests','burglary','robbery','violence','cocaine','heroin']
+neg = ['criminal','firearms','murders','manslaughter','arrests','burglary','robbery','violence','cocaine','heroin','criminals','murder','firearm']
 #victimization, missing persons,
 outDir = 'data/'+town+'-edited/'
 
 stop_words = set(stopwords.words('english'))
 #add some common yet meaningless words to stop words to remove
-meaningless_words = ['county','nassau','long','island','york','NY']
+meaningless_words = ['county','nassau','long','island','york','NY','say','go','make','would','get','also','year','one','two','newsday','could']
 stop_words.update(meaningless_words)
+stop_words.update(town)
 
 for article in inFiles: #each article is its own line
     name = 'data/'+town+'/'+article
@@ -76,10 +77,12 @@ for article in inFiles: #each article is its own line
             else:
                 pos = 'a'
             if word.isalpha():
-                if not word in stop_words:
+                lemmed_word = lemmatizer.lemmatize(word,pos)
+                if not lemmed_word in stop_words:
+                    edited.append(word)
+                #if not word in stop_words:
                     #print(lemmatizer.lemmatize(word))
-                    edited.append(lemmatizer.lemmatize(word,pos))
-    #bag of words vectors?
+                #    edited.append(lemmatizer.lemmatize(word,pos))
 
     if keep:
         outName = outDir+article[:-5]+'-'+str(truthNeg)+'.txt'

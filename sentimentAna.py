@@ -34,17 +34,22 @@ def get_all_words(articles):
             yield word
 
 if __name__ == "__main__":
+    town_names = ['Baldwin','Freeport','Oceanside','Rockville Centre']
+    town = ''
+    while not town:
+        town = input("Which town would you like to wrangle the text for? ")
+        if town in town_names:
+            print("Now Splitting "+town)
+        else: print("You didn't enter a valid town, please try again")
 
-    #town = 'Baldwin' - generalize to multiple towns soon
-    negFiles = glob.glob('data/Baldwin-neg/*.txt')
-    posFiles = glob.glob('data/Baldwin-pos/*.txt')
+    negFiles = glob.glob('data/'+town+'-edited/*True*.txt')
+    posFiles = glob.glob('data/'+town+'-edited/*False*.txt')
 
     neg_articles = []
     pos_articles = []
 
-    for file in negFiles: #these are true positives/negative sentiment
-    	neg_articles.append(readIn(file))
-
+    for file in negFiles:
+        neg_articles.append(readIn(file))
     for file in posFiles:
         pos_articles.append(readIn(file))
 
