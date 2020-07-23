@@ -1,0 +1,20 @@
+2019 from neighborhoodscout
+
+Baldiwn
+CI: 51
+#v crime = 35
+#property crimes = 264
+per capita: 1.44/10.83 
+
+Freeport 
+CI: 55
+#v crimes = 70
+#property crimes = 423
+per capita:1.63/9.83
+
+Oceanside
+
+CI: 62
+#v crimes = 22
+#property crimes = 295
+per capita: 0.68/9.06
