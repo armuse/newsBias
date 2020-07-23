@@ -7,8 +7,8 @@ while not town:
         print("Now Splitting "+town)
     else: print("You didn't enter a valid town, please try again")
 
-#inFile = 'ProQuestDocuments-'+town+'-1000.txt'
-inFile = 'input-Baldwin.txt'
+inFile = 'ProQuestDocuments-'+town+'-1000.txt'
+#inFile = 'input-Freeport.txt'
 input = open(inFile,'r')
 
 #town = 'Baldwin' #'Freeport', 'Oceanside', 'Rockville'
