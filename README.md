@@ -31,6 +31,7 @@ Terms used for identifying crimes (truth dataset):
 	manslaughter
 	shooting
 
-Test data sample for software development ~ 100 
-Train on ~1000 articles per town 
 Approximately 3500-4000 articles per town in 5 years
+Have ~1k articles per town right now, train/test 80/20
+
+Following tutorial at: https://www.digitalocean.com/community/tutorials/how-to-perform-sentiment-analysis-in-python-3-using-the-natural-language-toolkit-nltk
