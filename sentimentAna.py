@@ -6,8 +6,9 @@ from numpy import random
 from nltk import FreqDist
 from nltk import classify
 from nltk import NaiveBayesClassifier
+import nltk.metrics
 
-#add precision, recall, F1 etc
+#add precision, recall
 #try 10 k-fold instead of single train-test split
 #test weighting by TF IDF
 

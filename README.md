@@ -2,8 +2,9 @@
 Goal: exploring news bias in local reporting over the last 5 years (2015-2020)
 
 Instructions so far (uses python3):
-python splitRecords.py
-python wrangleText.py
+python3 splitRecords.py
+python3 wrangleText.py
+python3 sentimentAnalysis.py
 
 Jupyter notebook of Demographics for further analysis
 
@@ -31,7 +32,7 @@ Terms used for identifying crimes (truth dataset):
 	manslaughter
 	shooting
 
-Approximately 3500-4000 articles per town in 5 years
 Have ~1k articles per town right now, train/test 80/20
+Goal to improve Accuracy: Approximately 3500-4500 articles per town in 5 years
 
 Following tutorial at: https://www.digitalocean.com/community/tutorials/how-to-perform-sentiment-analysis-in-python-3-using-the-natural-language-toolkit-nltk
