@@ -1,54 +1,62 @@
-#get a town name
-town_names = ['Baldwin','Freeport','Oceanside','Rockville Centre']
-town = ''
-while not town:
-    town = input("Which town would you like to process the data for? ")
-    if town in town_names:
-        print("Now Splitting "+town)
-    else: print("You didn't enter a valid town, please try again")
+def townNaming(town=''):
 
-inFile = 'ProQuestDocuments-'+town+'-1000.txt'
-#inFile = 'input-Freeport.txt'
-input = open(inFile,'r')
+	town_names = ['Baldwin','Freeport','Oceanside']
+	while not town:
+		town = input("Which town would you like to process the data for? ")
+		if town in town_names:
+			print("Now Splitting "+town)
+		else: print("You didn't enter a valid town, please try again")
+	return town
 
-#town = 'Baldwin' #'Freeport', 'Oceanside', 'Rockville'
-outDir = 'data/'+town+'/'
-title = 'empty'
-text = 'empty'
-subject = 'empty'
+def reinitializeFile():
+	docId = '0'
+	title = 'refill'
+	fullText = 'refill'
+	subject = 'refill'
 
-try:
-    docId = '0'
-    counter = 0
-    for line in input:
-        if line[0:3] == '___':
-            #this marks a new record, record previous and clear saved info
-            outputName = town+'-'+docId+'.txt'
-            out = open(outDir+outputName, 'w')
-            out.write(title+'\n')#+title
-            out.write(text+'\n')#+text
-            out.write(subject+'\n')#+subject
-            out.close()
-            docId = '0'
-            title = 'refill'
-            text = 'refill'
-            subject = 'refill'
+def breakdownFile(town):
 
-        elif counter > 0:  #add rest of full text
-            if line[0:3] == 'Sub': #add subject terms
-                counter = 0
-                subject = line
-            elif line[0:3] == 'CAP' or line[0:3] == 'CRE': continue
-            else: text += line
-        elif line[0:3] == 'Tit': #add title
-            title = line
-        elif line[0:3] == 'Ful': #start adding full text
-            text = line
-            counter = 1
-        elif line[0:3] == 'Pro': #add document ID aka bookkeeping
-            docId = line[22:-2] #there's a '\n' at the end
-        else: continue #information we don't need to save
+	inFile = 'ProQuestDocuments-'+town+'-1000.txt'
+	input = open(inFile,'r')
 
+	outputDir = 'data/'+town+'/'
+	title = 'empty'
+	fullText = 'empty'
+	subject = 'empty'
 
-finally:
-    input.close()
+	try:
+		docId = '0'
+		counter = 0
+		for line in input:
+			if line[0:3] == '___': #this marks a new record, record previous and clear saved info
+				outputName = town+'-'+docId+'.txt'
+				out = open(outputDir+outputName, 'w')
+				out.write(title+'\n')
+				out.write(fullText+'\n')
+				out.write(subject+'\n')
+				out.close()
+				reinitializeFile()
+			elif counter > 0:
+				if line[0:3] == 'Sub': #subject
+					subject = line
+					counter = 0
+				elif line[0:3] == 'CAP' or line[0:3] == 'CRE': continue #don't save Caption or Credit info
+				else: fullText += line
+			elif line[0:3] == 'Tit': # title
+				title = line
+			elif line[0:3] == 'Ful': # fullText
+				fullText = line
+				counter = 1
+			elif line[0:3] == 'Pro': #add document ID aka bookkeeping
+				docId = line[22:-2] #there's a '\n' at the end
+				counter = 0
+			else: continue #information we don't need to save
+
+	finally:
+		input.close()
+
+def main():
+	town = townNaming()
+	breakdownFile(town)
+
+main()
