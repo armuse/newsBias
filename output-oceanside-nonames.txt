@@ -11153,3 +11153,348 @@ Most Informative Features
                   felony = True           Negati : Positi =     32.3 : 1.0
                 suspects = True           Negati : Positi =     32.3 : 1.0
 None
+Accuracy is:  0.8253968253968254
+Most Informative Features
+                 pleaded = True           Negati : Positi =     68.4 : 1.0
+                   knife = True           Negati : Positi =     66.4 : 1.0
+                    bail = True           Negati : Positi =     62.3 : 1.0
+                 fatally = True           Negati : Positi =     49.4 : 1.0
+                  scheme = True           Negati : Positi =     49.4 : 1.0
+             prosecutors = True           Negati : Positi =     48.9 : 1.0
+                 suspect = True           Negati : Positi =     48.0 : 1.0
+                 larceny = True           Negati : Positi =     46.0 : 1.0
+              indictment = True           Negati : Positi =     42.6 : 1.0
+                  guilty = True           Negati : Positi =     42.6 : 1.0
+              discovered = True           Negati : Positi =     35.8 : 1.0
+                    gang = True           Negati : Positi =     35.8 : 1.0
+                homicide = True           Negati : Positi =     35.8 : 1.0
+                  papers = True           Negati : Positi =     35.8 : 1.0
+                  prison = True           Negati : Positi =     34.3 : 1.0
+               arraigned = True           Negati : Positi =     33.7 : 1.0
+                  felony = True           Negati : Positi =     32.3 : 1.0
+                   theft = True           Negati : Positi =     32.3 : 1.0
+                 witness = True           Negati : Positi =     32.3 : 1.0
+               stabbings = True           Negati : Positi =     29.6 : 1.0
+None
+Accuracy is:  0.8465608465608465
+Most Informative Features
+                 suspect = True           Negati : Positi =     80.0 : 1.0
+                 pleaded = True           Negati : Positi =     68.4 : 1.0
+                   knife = True           Negati : Positi =     66.4 : 1.0
+                 stabbed = True           Negati : Positi =     63.0 : 1.0
+                    bail = True           Negati : Positi =     62.3 : 1.0
+             arraignment = True           Negati : Positi =     52.1 : 1.0
+                 fatally = True           Negati : Positi =     49.4 : 1.0
+                  scheme = True           Negati : Positi =     49.4 : 1.0
+             prosecutors = True           Negati : Positi =     48.9 : 1.0
+                 larceny = True           Negati : Positi =     46.0 : 1.0
+              indictment = True           Negati : Positi =     42.6 : 1.0
+                  guilty = True           Negati : Positi =     42.6 : 1.0
+                arrested = True           Negati : Positi =     40.4 : 1.0
+              discovered = True           Negati : Positi =     35.8 : 1.0
+                    gang = True           Negati : Positi =     35.8 : 1.0
+                homicide = True           Negati : Positi =     35.8 : 1.0
+                  papers = True           Negati : Positi =     35.8 : 1.0
+          investigations = True           Negati : Positi =     35.8 : 1.0
+                  prison = True           Negati : Positi =     34.3 : 1.0
+               arraigned = True           Negati : Positi =     33.7 : 1.0
+None
+Accuracy is:  0.8253968253968254
+Most Informative Features
+                 pleaded = True           Negati : Positi =    114.1 : 1.0
+                 suspect = True           Negati : Positi =     80.0 : 1.0
+             prosecutors = True           Negati : Positi =     68.4 : 1.0
+                   knife = True           Negati : Positi =     66.4 : 1.0
+                 stabbed = True           Negati : Positi =     63.0 : 1.0
+                    bail = True           Negati : Positi =     62.3 : 1.0
+               arraigned = True           Negati : Positi =     56.2 : 1.0
+                  guilty = True           Negati : Positi =     54.7 : 1.0
+                 fatally = True           Negati : Positi =     49.4 : 1.0
+                  scheme = True           Negati : Positi =     49.4 : 1.0
+                  prison = True           Negati : Positi =     48.0 : 1.0
+                    jury = True           Negati : Positi =     46.0 : 1.0
+                 larceny = True           Negati : Positi =     46.0 : 1.0
+              indictment = True           Negati : Positi =     42.6 : 1.0
+             arraignment = True           Negati : Positi =     37.2 : 1.0
+                    gang = True           Negati : Positi =     35.8 : 1.0
+                homicide = True           Negati : Positi =     35.8 : 1.0
+                  papers = True           Negati : Positi =     35.8 : 1.0
+                arrested = True           Negati : Positi =     34.2 : 1.0
+                  arrest = True           Negati : Positi =     33.5 : 1.0
+None
+Accuracy is:  0.873015873015873
+Most Informative Features
+                 pleaded = True           Negati : Positi =     68.4 : 1.0
+                   knife = True           Negati : Positi =     66.4 : 1.0
+                 stabbed = True           Negati : Positi =     63.0 : 1.0
+                    bail = True           Negati : Positi =     62.3 : 1.0
+                 fatally = True           Negati : Positi =     49.4 : 1.0
+                  scheme = True           Negati : Positi =     49.4 : 1.0
+             prosecutors = True           Negati : Positi =     48.9 : 1.0
+                 suspect = True           Negati : Positi =     48.0 : 1.0
+                 larceny = True           Negati : Positi =     46.0 : 1.0
+              indictment = True           Negati : Positi =     42.6 : 1.0
+                  guilty = True           Negati : Positi =     42.6 : 1.0
+                 killing = True           Negati : Positi =     37.8 : 1.0
+                    gang = True           Negati : Positi =     35.8 : 1.0
+                  papers = True           Negati : Positi =     35.8 : 1.0
+                  prison = True           Negati : Positi =     34.3 : 1.0
+               arraigned = True           Negati : Positi =     33.7 : 1.0
+                  felony = True           Negati : Positi =     32.3 : 1.0
+                suspects = True           Negati : Positi =     32.3 : 1.0
+                   theft = True           Negati : Positi =     32.3 : 1.0
+                 charged = True           Negati : Positi =     30.4 : 1.0
+None
+Accuracy is:  0.8359788359788359
+Most Informative Features
+                 pleaded = True           Negati : Positi =     68.4 : 1.0
+                 stabbed = True           Negati : Positi =     63.0 : 1.0
+                    bail = True           Negati : Positi =     62.3 : 1.0
+                 fatally = True           Negati : Positi =     49.4 : 1.0
+                  scheme = True           Negati : Positi =     49.4 : 1.0
+             prosecutors = True           Negati : Positi =     48.9 : 1.0
+                 suspect = True           Negati : Positi =     48.0 : 1.0
+                 larceny = True           Negati : Positi =     46.0 : 1.0
+              indictment = True           Negati : Positi =     42.6 : 1.0
+                  guilty = True           Negati : Positi =     42.6 : 1.0
+                arrested = True           Negati : Positi =     40.4 : 1.0
+                 killing = True           Negati : Positi =     37.8 : 1.0
+                   brawl = True           Negati : Positi =     35.8 : 1.0
+              discovered = True           Negati : Positi =     35.8 : 1.0
+                    gang = True           Negati : Positi =     35.8 : 1.0
+                homicide = True           Negati : Positi =     35.8 : 1.0
+                  papers = True           Negati : Positi =     35.8 : 1.0
+                  prison = True           Negati : Positi =     34.3 : 1.0
+               arraigned = True           Negati : Positi =     33.7 : 1.0
+                  felony = True           Negati : Positi =     32.3 : 1.0
+None
+Accuracy is:  0.8624338624338624
+Most Informative Features
+                 pleaded = True           Negati : Positi =     68.4 : 1.0
+                 stabbed = True           Negati : Positi =     63.0 : 1.0
+                    bail = True           Negati : Positi =     62.3 : 1.0
+                 fatally = True           Negati : Positi =     49.4 : 1.0
+                  scheme = True           Negati : Positi =     49.4 : 1.0
+             prosecutors = True           Negati : Positi =     48.9 : 1.0
+                 suspect = True           Negati : Positi =     48.0 : 1.0
+                 larceny = True           Negati : Positi =     46.0 : 1.0
+              indictment = True           Negati : Positi =     42.6 : 1.0
+                  guilty = True           Negati : Positi =     42.6 : 1.0
+              discovered = True           Negati : Positi =     35.8 : 1.0
+                    gang = True           Negati : Positi =     35.8 : 1.0
+                homicide = True           Negati : Positi =     35.8 : 1.0
+                  prison = True           Negati : Positi =     34.3 : 1.0
+               arraigned = True           Negati : Positi =     33.7 : 1.0
+                  felony = True           Negati : Positi =     32.3 : 1.0
+                suspects = True           Negati : Positi =     32.3 : 1.0
+                   theft = True           Negati : Positi =     32.3 : 1.0
+                  weapon = True           Negati : Positi =     31.7 : 1.0
+            surveillance = True           Negati : Positi =     29.6 : 1.0
+None
+Accuracy is:  0.8253968253968254
+Most Informative Features
+                 pleaded = True           Negati : Positi =     68.4 : 1.0
+                   knife = True           Negati : Positi =     66.4 : 1.0
+                 stabbed = True           Negati : Positi =     63.0 : 1.0
+                    bail = True           Negati : Positi =     62.3 : 1.0
+                  guilty = True           Negati : Positi =     54.7 : 1.0
+                 fatally = True           Negati : Positi =     49.4 : 1.0
+                  scheme = True           Negati : Positi =     49.4 : 1.0
+             prosecutors = True           Negati : Positi =     48.9 : 1.0
+                 suspect = True           Negati : Positi =     48.0 : 1.0
+                    jury = True           Negati : Positi =     46.0 : 1.0
+                 larceny = True           Negati : Positi =     46.0 : 1.0
+              indictment = True           Negati : Positi =     42.6 : 1.0
+             arraignment = True           Negati : Positi =     37.2 : 1.0
+              discovered = True           Negati : Positi =     35.8 : 1.0
+                    gang = True           Negati : Positi =     35.8 : 1.0
+                homicide = True           Negati : Positi =     35.8 : 1.0
+                  papers = True           Negati : Positi =     35.8 : 1.0
+          investigations = True           Negati : Positi =     35.8 : 1.0
+                  prison = True           Negati : Positi =     34.3 : 1.0
+                arrested = True           Negati : Positi =     34.2 : 1.0
+None
+Accuracy is:  0.8518518518518519
+Most Informative Features
+                 suspect = True           Negati : Positi =     80.0 : 1.0
+                 pleaded = True           Negati : Positi =     68.4 : 1.0
+                   knife = True           Negati : Positi =     66.4 : 1.0
+                 stabbed = True           Negati : Positi =     63.0 : 1.0
+                    bail = True           Negati : Positi =     62.3 : 1.0
+                  guilty = True           Negati : Positi =     54.7 : 1.0
+                 fatally = True           Negati : Positi =     49.4 : 1.0
+                  scheme = True           Negati : Positi =     49.4 : 1.0
+            surveillance = True           Negati : Positi =     49.4 : 1.0
+             prosecutors = True           Negati : Positi =     48.9 : 1.0
+                 larceny = True           Negati : Positi =     46.0 : 1.0
+                  arrest = True           Negati : Positi =     43.0 : 1.0
+              indictment = True           Negati : Positi =     42.6 : 1.0
+                arrested = True           Negati : Positi =     40.4 : 1.0
+              discovered = True           Negati : Positi =     35.8 : 1.0
+                    gang = True           Negati : Positi =     35.8 : 1.0
+                homicide = True           Negati : Positi =     35.8 : 1.0
+                  papers = True           Negati : Positi =     35.8 : 1.0
+          investigations = True           Negati : Positi =     35.8 : 1.0
+                  prison = True           Negati : Positi =     34.3 : 1.0
+None
+Accuracy is:  0.8148148148148148
+Most Informative Features
+                 pleaded = True           Negati : Positi =     68.4 : 1.0
+             prosecutors = True           Negati : Positi =     68.4 : 1.0
+                 stabbed = True           Negati : Positi =     63.0 : 1.0
+                    bail = True           Negati : Positi =     62.3 : 1.0
+                 fatally = True           Negati : Positi =     49.4 : 1.0
+                  scheme = True           Negati : Positi =     49.4 : 1.0
+                 suspect = True           Negati : Positi =     48.0 : 1.0
+                    jury = True           Negati : Positi =     46.0 : 1.0
+                 larceny = True           Negati : Positi =     46.0 : 1.0
+              indictment = True           Negati : Positi =     42.6 : 1.0
+                  guilty = True           Negati : Positi =     42.6 : 1.0
+              discovered = True           Negati : Positi =     35.8 : 1.0
+                    gang = True           Negati : Positi =     35.8 : 1.0
+                homicide = True           Negati : Positi =     35.8 : 1.0
+                  papers = True           Negati : Positi =     35.8 : 1.0
+                  prison = True           Negati : Positi =     34.3 : 1.0
+                arrested = True           Negati : Positi =     34.2 : 1.0
+               arraigned = True           Negati : Positi =     33.7 : 1.0
+                   crime = True           Negati : Positi =     32.6 : 1.0
+                  felony = True           Negati : Positi =     32.3 : 1.0
+None
+Accuracy is:  0.8518518518518519
+Most Informative Features
+                 pleaded = True           Negati : Positi =     68.4 : 1.0
+                   knife = True           Negati : Positi =     66.4 : 1.0
+                 stabbed = True           Negati : Positi =     63.0 : 1.0
+                    bail = True           Negati : Positi =     62.3 : 1.0
+                  guilty = True           Negati : Positi =     54.7 : 1.0
+                 fatally = True           Negati : Positi =     49.4 : 1.0
+                  scheme = True           Negati : Positi =     49.4 : 1.0
+             prosecutors = True           Negati : Positi =     48.9 : 1.0
+                 suspect = True           Negati : Positi =     48.0 : 1.0
+                 larceny = True           Negati : Positi =     46.0 : 1.0
+              indictment = True           Negati : Positi =     42.6 : 1.0
+             arraignment = True           Negati : Positi =     37.2 : 1.0
+              discovered = True           Negati : Positi =     35.8 : 1.0
+                    gang = True           Negati : Positi =     35.8 : 1.0
+                homicide = True           Negati : Positi =     35.8 : 1.0
+                  papers = True           Negati : Positi =     35.8 : 1.0
+          investigations = True           Negati : Positi =     35.8 : 1.0
+                  prison = True           Negati : Positi =     34.3 : 1.0
+                arrested = True           Negati : Positi =     34.2 : 1.0
+               arraigned = True           Negati : Positi =     33.7 : 1.0
+None
+Accuracy is:  0.8412698412698413
+Most Informative Features
+                 pleaded = True           Negati : Positi =     68.4 : 1.0
+                 stabbed = True           Negati : Positi =     63.0 : 1.0
+                    bail = True           Negati : Positi =     62.3 : 1.0
+                 fatally = True           Negati : Positi =     49.4 : 1.0
+                  scheme = True           Negati : Positi =     49.4 : 1.0
+             prosecutors = True           Negati : Positi =     48.9 : 1.0
+                 suspect = True           Negati : Positi =     48.0 : 1.0
+                 larceny = True           Negati : Positi =     46.0 : 1.0
+              indictment = True           Negati : Positi =     42.6 : 1.0
+                  guilty = True           Negati : Positi =     42.6 : 1.0
+            confidential = True           Negati : Positi =     39.8 : 1.0
+              discovered = True           Negati : Positi =     35.8 : 1.0
+                    gang = True           Negati : Positi =     35.8 : 1.0
+                homicide = True           Negati : Positi =     35.8 : 1.0
+                  papers = True           Negati : Positi =     35.8 : 1.0
+                  prison = True           Negati : Positi =     34.3 : 1.0
+               arraigned = True           Negati : Positi =     33.7 : 1.0
+                  felony = True           Negati : Positi =     32.3 : 1.0
+                suspects = True           Negati : Positi =     32.3 : 1.0
+                   theft = True           Negati : Positi =     32.3 : 1.0
+None
+Accuracy is:  0.8359788359788359
+Most Informative Features
+                 suspect = True           Negati : Positi =     80.0 : 1.0
+                 pleaded = True           Negati : Positi =     68.4 : 1.0
+                   knife = True           Negati : Positi =     66.4 : 1.0
+                 stabbed = True           Negati : Positi =     63.0 : 1.0
+                    bail = True           Negati : Positi =     62.3 : 1.0
+                 fatally = True           Negati : Positi =     49.4 : 1.0
+                  scheme = True           Negati : Positi =     49.4 : 1.0
+             prosecutors = True           Negati : Positi =     48.9 : 1.0
+                 larceny = True           Negati : Positi =     46.0 : 1.0
+              indictment = True           Negati : Positi =     42.6 : 1.0
+                  guilty = True           Negati : Positi =     42.6 : 1.0
+                   brawl = True           Negati : Positi =     35.8 : 1.0
+              discovered = True           Negati : Positi =     35.8 : 1.0
+                    gang = True           Negati : Positi =     35.8 : 1.0
+                homicide = True           Negati : Positi =     35.8 : 1.0
+                  papers = True           Negati : Positi =     35.8 : 1.0
+                  prison = True           Negati : Positi =     34.3 : 1.0
+                arrested = True           Negati : Positi =     34.2 : 1.0
+               arraigned = True           Negati : Positi =     33.7 : 1.0
+                  felony = True           Negati : Positi =     32.3 : 1.0
+None
+Accuracy is:  0.8042328042328042
+Most Informative Features
+                 pleaded = True           Negati : Positi =     68.4 : 1.0
+                   knife = True           Negati : Positi =     66.4 : 1.0
+                 stabbed = True           Negati : Positi =     63.0 : 1.0
+                    bail = True           Negati : Positi =     62.3 : 1.0
+                 fatally = True           Negati : Positi =     49.4 : 1.0
+                  scheme = True           Negati : Positi =     49.4 : 1.0
+            surveillance = True           Negati : Positi =     49.4 : 1.0
+             prosecutors = True           Negati : Positi =     48.9 : 1.0
+                 suspect = True           Negati : Positi =     48.0 : 1.0
+                 larceny = True           Negati : Positi =     46.0 : 1.0
+              indictment = True           Negati : Positi =     42.6 : 1.0
+                  guilty = True           Negati : Positi =     42.6 : 1.0
+              discovered = True           Negati : Positi =     35.8 : 1.0
+                    gang = True           Negati : Positi =     35.8 : 1.0
+                homicide = True           Negati : Positi =     35.8 : 1.0
+                  papers = True           Negati : Positi =     35.8 : 1.0
+                  prison = True           Negati : Positi =     34.3 : 1.0
+               arraigned = True           Negati : Positi =     33.7 : 1.0
+                  felony = True           Negati : Positi =     32.3 : 1.0
+                suspects = True           Negati : Positi =     32.3 : 1.0
+None
+Accuracy is:  0.8518518518518519
+Most Informative Features
+                 pleaded = True           Negati : Positi =     68.4 : 1.0
+                 stabbed = True           Negati : Positi =     63.0 : 1.0
+                    bail = True           Negati : Positi =     62.3 : 1.0
+                 fatally = True           Negati : Positi =     49.4 : 1.0
+                  scheme = True           Negati : Positi =     49.4 : 1.0
+             prosecutors = True           Negati : Positi =     48.9 : 1.0
+                 suspect = True           Negati : Positi =     48.0 : 1.0
+                 larceny = True           Negati : Positi =     46.0 : 1.0
+              indictment = True           Negati : Positi =     42.6 : 1.0
+                  guilty = True           Negati : Positi =     42.6 : 1.0
+              discovered = True           Negati : Positi =     35.8 : 1.0
+                    gang = True           Negati : Positi =     35.8 : 1.0
+                homicide = True           Negati : Positi =     35.8 : 1.0
+                  papers = True           Negati : Positi =     35.8 : 1.0
+                  prison = True           Negati : Positi =     34.3 : 1.0
+               arraigned = True           Negati : Positi =     33.7 : 1.0
+                   crime = True           Negati : Positi =     32.6 : 1.0
+                  felony = True           Negati : Positi =     32.3 : 1.0
+                suspects = True           Negati : Positi =     32.3 : 1.0
+                   theft = True           Negati : Positi =     32.3 : 1.0
+None
+Accuracy is:  0.8571428571428571
+Most Informative Features
+                    bail = True           Negati : Positi =    103.9 : 1.0
+                 pleaded = True           Negati : Positi =     68.4 : 1.0
+                   knife = True           Negati : Positi =     66.4 : 1.0
+                 stabbed = True           Negati : Positi =     63.0 : 1.0
+                 fatally = True           Negati : Positi =     49.4 : 1.0
+                  scheme = True           Negati : Positi =     49.4 : 1.0
+             prosecutors = True           Negati : Positi =     48.9 : 1.0
+                 suspect = True           Negati : Positi =     48.0 : 1.0
+                   crime = True           Negati : Positi =     47.1 : 1.0
+                    jury = True           Negati : Positi =     46.0 : 1.0
+                 larceny = True           Negati : Positi =     46.0 : 1.0
+              indictment = True           Negati : Positi =     42.6 : 1.0
+                  guilty = True           Negati : Positi =     42.6 : 1.0
+                 assault = True           Negati : Positi =     37.8 : 1.0
+             arraignment = True           Negati : Positi =     37.2 : 1.0
+              discovered = True           Negati : Positi =     35.8 : 1.0
+                    gang = True           Negati : Positi =     35.8 : 1.0
+                  papers = True           Negati : Positi =     35.8 : 1.0
+                  prison = True           Negati : Positi =     34.3 : 1.0
+                arrested = True           Negati : Positi =     34.2 : 1.0
+None
