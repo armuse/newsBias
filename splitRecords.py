@@ -28,28 +28,28 @@ def breakdownFile(town):
 		docId = '0'
 		counter = 0
 		for line in input:
-			if line[0:3] == '___': #this marks a new record, record previous and clear saved info
+			#if line[0:3] == '___': #this marks a new record, record previous and clear saved info 
+			if line[0:3] == 'Tit': # title
+				title = line
+			elif line[0:3] == 'Ful': # fullText
+				fullText = line
+				counter += 1
+			elif counter > 0:
+				if line[0:3] == 'Sub': #subject
+					subject = line
+					counter = 0
+				elif line[0:6] == 'CAPTION' or line[0:5] == 'CREDIT': continue #don't save Caption or Credit info
+				else: fullText += line
+			elif line[0:8] == 'ProQuest': #add document ID aka bookkeeping
+				docId = line[22:-2] #there's a '\n' at the end
 				outputName = town+'-'+docId+'.txt'
 				out = open(outputDir+outputName, 'w')
 				out.write(title+'\n')
 				out.write(fullText+'\n')
 				out.write(subject+'\n')
 				out.close()
-				reinitializeFile()
-			elif counter > 0:
-				if line[0:3] == 'Sub': #subject
-					subject = line
-					counter = 0
-				elif line[0:3] == 'CAP' or line[0:3] == 'CRE': continue #don't save Caption or Credit info
-				else: fullText += line
-			elif line[0:3] == 'Tit': # title
-				title = line
-			elif line[0:3] == 'Ful': # fullText
-				fullText = line
-				counter = 1
-			elif line[0:3] == 'Pro': #add document ID aka bookkeeping
-				docId = line[22:-2] #there's a '\n' at the end
 				counter = 0
+				reinitializeFile()
 			else: continue #information we don't need to save
 
 	finally:

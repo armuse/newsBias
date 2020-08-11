@@ -23,9 +23,9 @@ def createInputFile(town):
 
 def createNegativeTermList():
 
-    negativeTerms = ['criminal','firearms','murders','manslaughter','arrests','burglary',
-        'robbery','violence','cocaine','heroin','criminals','murder','firearm']
-    return negativeTerms
+    negativeWords = ['criminal','firearms','murders','manslaughter','arrests','burglary',
+        'robbery','violence','cocaine','heroin','murder','homicides','rape']
+    return negativeWords
 
 def writeOutFile(town,article,truthNeg,edited):
 
@@ -39,10 +39,24 @@ def writeOutFile(town,article,truthNeg,edited):
 def createStopWords(town):
 
     stopWords = set(stopwords.words('english'))
-    #add some common yet meaningless words to stop words to remove
-    meaningless_words = ['county','nassau','long','island','york',
-        'NY','say','go','make','would','get','also','year','one',
-        'two','newsday','could']
+    meaningless_words = []
+    if town == 'Baldwin':
+        meaningless_words = [town, 'county','nassau','long','island','york','NY',
+            'also','said','say','two','would','mangano']
+    elif town == 'Freeport':
+        meaningless_words = [town, 'county','nassau','long','island','york','NY',
+            'said','say','would','also','two','mangano','one']
+    elif town == 'Oceanside':
+        meaningless_words = [town, 'county','nassau','long','island','york','NY',
+            'said','one','also','two','say']
+    #meaningless_words = ['county','nassau','long','island','york','NY']
+#        'say','go','make','would','get','also','year','one','two','newsday',
+#        'could','hempstead']
+#add some common yet meaningless words to stop words to remove
+#    meaningless_words = ['county','nassau','long','island','new','york',
+#        'NY','say','go','make','would','get','also','year','one',
+#        'two','newsday','could','hempstead','mangano','district','copyright',
+#        town, 'new','news',]
     stopWords.update(meaningless_words)
     stopWords.update(town)
     return stopWords
@@ -60,8 +74,8 @@ def noMoreAlec(line):
         return True
     else: return False
 
-def labelArticles(neg,word_tokens): #True means criminal
-    for term in neg:
+def labelArticles(negativeWords,word_tokens): #True means criminal
+    for term in negativeWords:
         if term in word_tokens:
             return True
 
@@ -73,7 +87,7 @@ def main():
     inFiles = open('input.txt','r')
 
     lemmatizer = WordNetLemmatizer()
-    neg = createNegativeTermList()
+    negativeWords= createNegativeTermList()
     stopWords = createStopWords(town)
 
     for article in inFiles: #each article is its own line in inFiles
@@ -105,7 +119,7 @@ def main():
 
             word_tokens = word_tokenize(line)
 
-            if labelArticles(neg,word_tokens): truthNeg = True
+            if labelArticles(negativeWords,word_tokens): truthNeg = True
 
             for word, tag in pos_tag(word_tokens):
                 if tag.startswith('NN'):
