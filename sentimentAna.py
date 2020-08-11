@@ -50,7 +50,7 @@ def townNaming(town=''):
 
 if __name__ == "__main__":
     #town = townNaming()
-    town = 'Baldwin'
+    town = 'Oceanside'
 
     negFiles = glob.glob('data/'+town+'-edited/*True*.txt')
     posFiles = glob.glob('data/'+town+'-edited/*False*.txt')
