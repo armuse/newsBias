@@ -48,7 +48,7 @@ def createStopWords(town):
             'said','say','would','also','two','mangano','one']
     elif town == 'Oceanside':
         meaningless_words = [town, 'county','nassau','long','island','york','NY',
-            'said','one','also','two','say']
+            'said','one','also','two','say','keyanna','khaseen']
     #meaningless_words = ['county','nassau','long','island','york','NY']
 #        'say','go','make','would','get','also','year','one','two','newsday',
 #        'could','hempstead']
